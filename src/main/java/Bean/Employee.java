@@ -9,11 +9,11 @@ import java.util.Date;
  * The persistent class for the EMPLOYEE database table.
  * 
  */
-@Entity
+
 public class Employee implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id
+
 	private String emid;
 	private Integer autid;
 	private String autid_str;
@@ -25,12 +25,12 @@ public class Employee implements Serializable {
 	private String id;
 	private Integer count;
 
-	@Temporal(TemporalType.DATE)
+	
 	private Date leavedate;
 	private String name;
 	private String passwd;
 
-	@Temporal(TemporalType.DATE)
+	
 	private Date startdate;
 
 	public Employee() {
