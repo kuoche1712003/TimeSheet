@@ -1,0 +1,50 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<style>
+.paging tr td {
+  padding: 0 0.5em;
+}
+.paging tr td a:hover, .paging tr td a:focus {
+  text-decoration: none;
+}
+</style>
+<table border="0" style="float: left;" class="paging">
+    <tr>
+    <%
+        if (pageSize < totalCounts && pageIndex >= pageSize) { %>
+            <td><a href="<%=action%>?action=whichPage1">&laquo;</a></td>
+            <td><a href="<%=action%>?action=whichPage<%= whichPage-1 %>">&lsaquo;</a></td>
+    <%  } else { %>
+            <td></td>
+            <td></td>
+    <%  }
+        if (pageNumber > 1) { %>
+            <td>
+                <select id="whichPage" size="1" name="whichPage">
+                    <% for(int i = 1; i <= pageNumber; i++) { %>
+                        <option <% if (i == whichPage) { %>selected="true"<% } %> value="<%= i %>"><%= i %>
+                    <% } %>
+                </select> / <%= pageNumber %>
+            </td>
+    <%  }
+        if (pageSize < totalCounts && pageIndex < pageIndexArray[pageNumber - 1]) { %>
+            <td><a href="<%=action%>?action=whichPage<%= whichPage+1 %>">&rsaquo;</a></td>
+            <td><a href="<%=action%>?action=whichPage<%= pageNumber %>">&raquo;</a></td>
+    <%  } %>
+    </tr>
+</table>
+<%
+    int beginIndex = totalCounts == 0 ? 0 : (whichPage - 1) * pageSize + 1;
+    int endIndex = 0;
+    if (totalCounts == 0) {
+        endIndex = 0;
+    } else {
+        if (whichPage * pageSize > totalCounts) {
+            endIndex = totalCounts;
+        } else {
+            endIndex = whichPage * pageSize;
+        }
+    }
+%>
+
+<div style="float: right;">[ <%=beginIndex%> - <%=endIndex%> / <%=totalCounts%> ]</div>
+<div sytle="clear: both;"></div>

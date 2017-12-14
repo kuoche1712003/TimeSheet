@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Bootstrap -->
+  <!-- <link href="<%=request.getContextPath()%>/css/bootstrap.css" rel="stylesheet"> -->
+  <!-- <link href="<%=request.getContextPath()%>/css/style.css" rel="stylesheet">  -->
+    <script src="<%=application.getContextPath()%>/js/jquery-1.11.2.min.js"></script>
+  	<script src="<%=application.getContextPath()%>/js/jquery.blockUI.js"></script>
+	<script src="<%=application.getContextPath()%>/js/sweetalert.min.js"></script>
+  	<link rel="stylesheet" type="text/css" href="<%=application.getContextPath()%>/css/sweetalert.css">
+	<link href="<%=application.getContextPath()%>/css/bootstrap.css" rel="stylesheet">
+  	<link href="<%=application.getContextPath()%>/css/style.css" rel="stylesheet"> 
+  
+
+<!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5  elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
